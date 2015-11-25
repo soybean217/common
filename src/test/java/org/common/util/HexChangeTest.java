@@ -17,10 +17,10 @@ public class HexChangeTest {
 //  }
   
   @Test
-  public void testInputGtMax() {
+  public void testInputLessMin() {
     expectedEx.expect(IllegalArgumentException.class);
-    expectedEx.expectMessage(HexChange.EXCEPTION_OVERLOAD);
-    HexChange.convertToOtherHex((long)HexChange.STRING_MAP.length());
+    expectedEx.expectMessage(HexChange.EXCEPTION_LESS_MIN);
+    HexChange.convertToOtherHex(-1);
   }
 
 }
